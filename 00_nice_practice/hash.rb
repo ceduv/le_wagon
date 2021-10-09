@@ -31,6 +31,7 @@ def array_to_hash(array)
     end
     hash
 end
+<<<<<<< HEAD
 #===
 def array_to_hash(array)
   hash = {}                                        # create empty hash
@@ -40,6 +41,8 @@ def array_to_hash(array)
   end
   return hash                                      # return built hash
 end
+=======
+>>>>>>> 621404c08ce11d8c7e4c9eb262a825a1bfd56a6f
 
 #------------------BASE----------------------
 
