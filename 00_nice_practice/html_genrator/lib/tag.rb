@@ -8,3 +8,6 @@ def tag(tag_name, attributes = nil)
   content = yield
   "<#{open_tag}>#{content}</#{tag_name}>"
 end
+
+puts tag("h1"){"test"}                  # <h1>test</h1>
+puts tag("h1",["class","btn"]){"test"}  # <h1 class="btn">test</h1>

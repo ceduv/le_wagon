@@ -19,11 +19,7 @@ sorted_students = wagon_sort(students)
 num_students = sorted_students.size
 
 def pluralize(n, word)
-  if n == 1
-      "#{word}"
-  else
-      "#{word}s"
-  end
+  n == 1 ? "#{word}" : "#{word}s"
 end
 
 puts "Congratulations! Your Wagon has #{num_students} #{pluralize(num_students, "student")}:"
