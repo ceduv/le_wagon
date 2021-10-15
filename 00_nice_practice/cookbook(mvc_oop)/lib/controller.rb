@@ -9,13 +9,13 @@ class Controller
     @view.display(@cookbook.all)
   end
 
-  def create
+  def create    # comment jappelle l objet sans require ici?
     recipe = Recipe.new(@view.ask_for_stuff("name"), @view.ask_for_stuff("description"))
     @cookbook.add_recipe(recipe)
   end
 
   def destroy
-    @view.display(@cookbook.all)
+    list
     index = @view.ask_for_stuff("index of the recipe to destroy")
     @cookbook.remove_recipe(index)
   end

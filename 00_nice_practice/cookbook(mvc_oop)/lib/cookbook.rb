@@ -11,19 +11,16 @@ class Cookbook
   end
 
   def all
-    # load csv
     @recipes
   end
 
   def add_recipe(recipe)
     @recipes << recipe
-    # save to csv
     save
   end
 
   def remove_recipe(recipe_index)
     @recipes.delete_at(recipe_index.to_i - 1)
-    # save to csv
     save
   end
 

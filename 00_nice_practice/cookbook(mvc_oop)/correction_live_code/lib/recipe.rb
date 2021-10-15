@@ -1,8 +1,12 @@
-class Recipe # instance de recipe que je vais add a ma db
+class Recipe
   attr_reader :name, :description
 
   def initialize(name, description)
     @name = name
     @description = description
+  end
+
+  def data_for_csv
+    [@name, @descrition]
   end
 end
