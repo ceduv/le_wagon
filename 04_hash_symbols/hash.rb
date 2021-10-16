@@ -48,3 +48,32 @@ city[:mayor] # => nil
 # Delete the key/value `:monument
 city.delete(:monument)
 ​
+#-------------- MA METHODE --------------------
+
+
+a = [["cedric","duvillier",33],["alex","muller",29],["neris","muller",1]]
+my_hash = {}
+
+def to_hash(array)
+  hash = {
+    name: array[0],
+    lastname: array[1],
+    age: array[2]
+  }
+  return hash
+end
+
+a.each do |array|
+  puts "-"*25
+  puts to_hash(array)
+end
+
+def to_hash_with_index(array)
+  new_hash = {}
+  array.each_with_index do |array, index|
+    new_hash["student#{index}"] = to_hash(array)
+  end
+  new_hash
+end
+
+puts to_hash_with_index(a)
