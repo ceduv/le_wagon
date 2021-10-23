@@ -1,3 +1,5 @@
+require 'pry-byebug'
+
 class Post
   attr_reader :id
   attr_accessor :title, :url, :votes

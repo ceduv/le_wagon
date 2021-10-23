@@ -41,3 +41,14 @@ def save
       DB.execute("UPDATE posts SET url='#{@url}',votes='#{@votes}',title= '#{@title}' WHERE id='#{@id}'")
     end
 end
+
+#================
+
+def save
+  if @id.nil?
+    DB.execute("INSERT INTO posts (url, votes, title) VALUES (?, ?, ?)", @url, @votes, @title)
+    @id = DB.last_insert_row_id
+  else
+    DB.execute("UPDATE posts SET url = ?, votes = ?, title = ? WHERE id = ?", @url, @votes, @title, @id)
+  end
+end

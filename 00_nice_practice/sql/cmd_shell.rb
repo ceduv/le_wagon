@@ -7,11 +7,17 @@ sudo apt-get install sqlite3 libsqlite3-dev
 # Create a DB and start typing SQL queries
 sqlite3 db.sqlite
 
+#----------------------------------------------
+
+require 'sqlite3'
+DB = SQLite3::Database.new("db/doctors.db")
+
+rows = DB.execute('SELECT * FROM doctors')
 
 #----------------------------------------------
 #                  CMD
 
-.mode column             # design    
+.mode column             # design
 .headers on              # entete
 .read "data.sql"         # lire la db
 .help                    # some cmd
@@ -22,7 +28,7 @@ sqlite3 db.sqlite
 .indexes ?TABLE?         # Show names of indexes
 .open ?OPTIONS? ?FILE?   # Close existing database and reopen FILE
 .save FILE               # Write in-memory database into FILE
-.quit               
+.quit
 
 #----------------------------------------------
 #                KEY WORDS
@@ -36,7 +42,7 @@ FROM        # table
 WHERE experience>10
 WHERE speciality='dentist'
 WHERE specciality LIKE '%surgery%'
-AND 
+AND
 ORDER BY experience ASC/DESC
 
 HAVING      # ???
