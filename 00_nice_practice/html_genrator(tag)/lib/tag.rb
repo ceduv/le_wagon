@@ -1,6 +1,7 @@
 def tag(tag_name, attributes = nil)
   # TODO: Build HTML tags around content given in the block
-  #       The method can be called with an optional HTML attribute inputted as [attr_name, attr_value]
+  #       The method can be called with an optional HTML attribute
+  #       inputted as [attr_name, attr_value]
   attr_name = attributes.nil? ? nil : attributes.first
   attr_value = attributes.nil? ? nil : attributes.last
 
@@ -9,5 +10,7 @@ def tag(tag_name, attributes = nil)
   "<#{open_tag}>#{content}</#{tag_name}>"
 end
 
-puts tag("h1"){"test"}                  # <h1>test</h1>
-puts tag("h1",["class","btn"]){"test"}  # <h1 class="btn">test</h1>
+puts tag(:h1) { :test }
+# <h1>test</h1>
+puts tag("h1",["class","btn"]){"test"}
+# <h1 class="btn">test</h1>

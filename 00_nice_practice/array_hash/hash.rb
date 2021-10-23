@@ -57,3 +57,11 @@ city[:mayor] # => nil
 # Delete the key/value `:monument
 city.delete(:monument)
 ​
+#-------------FLATTEN------------------------
+
+.flatten 
+array = [["cedric",33],["alex",29]]
+array.flatten
+# renvoi # ne detruit as array
+["cedric", 33, "alex", 29]
+# *** .flatten!

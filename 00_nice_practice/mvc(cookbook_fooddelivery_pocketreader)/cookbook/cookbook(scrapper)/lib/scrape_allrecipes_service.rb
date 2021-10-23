@@ -7,7 +7,7 @@ class ScrapeAllrecipesService
     @ingredient = ingredient
   end
 
-  def call
+  def call # rubocop:disable Metrics, Layout/LineLength
     html = URI.open("https://www.allrecipes.com/search/results/?search=#{@ingredient}").read
     # 1. Parse HTML
     doc = Nokogiri::HTML(html, nil, "utf-8")
