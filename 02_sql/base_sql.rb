@@ -49,3 +49,14 @@ Ruby                  (ex)       DB                    (ex)
 Model             (Doctor)       Table            (doctors)
 Instance      (Doctor.new)       Row
 Instance variable  (@name)       Column              (name)
+
+
+#-----------------------------
+
+CREATE TABLE `family` (
+  `id`  INTEGER PRIMARY KEY AUTOINCREMENT,
+  `nom` TEXT,
+  `prenom` TEXT,
+  `aniv` DATE,
+  `adress` TEXT
+);
