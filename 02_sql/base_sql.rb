@@ -6,6 +6,14 @@ sqlite3 db.sqlite
 
 #-------------------------------
 
+Ruby                  (ex)       DB                    (ex)
+--------------------------  <=>  --------------------------
+Model             (Doctor)       Table            (doctors)
+Instance      (Doctor.new)       Row
+Instance variable  (@name)       Column              (name)
+
+#-------------------------------
+
 # refacto
 
 SELECT * FROM doctors
@@ -42,10 +50,4 @@ john.id = id
 
 last_insert_row_id
 
-#-------------------------------
-
-Ruby                  (ex)       DB                    (ex)
---------------------------  <=>  --------------------------
-Model             (Doctor)       Table            (doctors)
-Instance      (Doctor.new)       Row
-Instance variable  (@name)       Column              (name)
+.flatten
