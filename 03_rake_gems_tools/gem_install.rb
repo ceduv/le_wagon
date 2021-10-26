@@ -1,11 +1,18 @@
 #========== GEM ============
 
-bundle install      # list les gems
+bundle install              # list les gems
 
-gem install sqlite3
+
+#--------------
+#   ByeBug
 
 gem install pry             # require "pry"
 gem install pry-byebug      # require "pry-byebug"
+
+#--------------
+#   Sqlite3
+
+gem install sqlite3
 
 #--------------
 # ActiveRecord
@@ -13,7 +20,7 @@ gem install pry-byebug      # require "pry-byebug"
 gem install activerecord -v 6.0
 
 #---------------
-# bunch of data
+# Bunch of data
 
 gem install faker
 #---
