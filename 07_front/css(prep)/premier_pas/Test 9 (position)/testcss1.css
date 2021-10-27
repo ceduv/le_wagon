@@ -1,0 +1,28 @@
+/*position:static/relative top left right bottom
+  position: absolute tout part du meme point topleft
+  z-index:15 14 13 12 pour superposition de box
+  box-sizing par defaut en content passer en border box pour eviter les depassement de contenu
+*/
+
+body{
+    background-color: #efefef;
+    margin: auto;
+    width: 1000px;}
+p{
+}
+div{
+    width:100px;
+    height: 100px;
+}
+.first{background-color: #c98b8b;
+
+}
+.second{background-color:#6690eb ;
+        position: relative;
+        left: 100px;
+        top: 50px;
+
+}
+.third{background-color: #72aa7f;
+
+}

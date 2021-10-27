@@ -1,0 +1,48 @@
+body{
+  background-color: #eee;
+}
+img{
+  max-width: 100%;
+  height: auto;
+}
+.container{
+  display: grid;
+  grid-template-columns: auto minmax(150px, 300px);
+  grid-template-areas: "entete entete"
+                       "principal baree"
+                       "pied pied";
+}
+section,aside{
+  padding: 20px;
+}
+header{
+  grid-area:entete;
+}
+section{
+  grid-area:principal;
+        background-color: #ddd;
+      }
+aside{
+  grid-area:baree;
+        background-color: #aaa;
+      }
+footer{
+  grid-area:pied;
+}
+@media(max-width:600px) /*all screen speech print*/
+{
+  .container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "entete "
+                         "principal "
+                         "baree "
+                         "pied ";
+  }
+
+}
+@media screen and (min-width:568px){} /*xs sm md lg xl xxl 1440*/
+@media screen and (min-width:768px){}
+@media screen and (min-width:992px){}
+@media screen and (min-width:1024px){}
+@media screen and (min-width:1280px){}

@@ -1,0 +1,26 @@
+h1{
+    margin-right: 150px;
+    margin-left:150px;
+    text-align: center;
+    text-transform:;
+    font-size: 50px;
+    border: 4mm ridge #3d32dc99;
+    border-radius:5px;
+    background-clip: content-box;
+    background-image: url(background3.jpg);}   
+div,p.lien{
+    text-align: center;}
+p.testp{
+    color:#000000; /*couleur haxadecimal ou rgb(0,0,0,x) x=opacité en 0 et 1.0*/}
+body{
+    /*background-color:#DDD ;*/
+   /* background-image: url(background3.jpg);
+    background-position: center;/*px px % top bottom left */
+    /*background-repeat: repeat;/* -x -y*/
+    /*background-size:cover; /*sadapte a la taille de l ecran (contain px px %)*/ 
+    /*background-attachment:scroll/fixed;*/}
+p{
+    background-image: url(background3.jpg);
+    background-origin: padding-box;}
+
+        

@@ -1,0 +1,49 @@
+/* components */
+@import url("components/card.css");
+@import url("components/avatar.css");
+@import url("components/button.css");
+
+
+/* --- Google Fonts --- */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Poppins:400,700");
+
+/* --- Fonts --- */
+body {
+  font-family: "Open Sans", "Helvetica", "sans-serif";
+  padding-bottom: 200px;
+  margin: 0;
+  background: #F4F4F4;
+}
+h1, h2, h3 {
+  font-family: "Poppins", "sans-serif";
+  text-align: center;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+.container {
+  margin: 0 auto;
+  max-width: 900px;
+}
+.text-center {
+  text-align: center;
+}
+.list-inline {
+  list-style: none;
+  padding-left: 0px;
+  margin: 0;
+  text-align: right;
+  padding-top: 8px;
+}
+.list-inline li {
+  display: inline-block;
+  color: grey;
+  margin-right: 3px;
+}
+
+.list-inline li i {
+  margin-right: 2px;
+}

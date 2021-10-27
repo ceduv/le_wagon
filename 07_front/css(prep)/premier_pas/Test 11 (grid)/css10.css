@@ -1,0 +1,49 @@
+/*
+CONTAINER:  grid-template-columns x x x|1fr 1fr 1fr(fr dyna)|repeat(3, 1fr|min-content|  auto-fill|fit-containt|repeat(3, minmax(100px, 200px))
+            grid-template-rows:[row1-start] 150px[row1-end row2-start] 150px;
+            grid-template-areas
+            grid-template 150px 150px / 100px 100px
+            justify-content
+            align-content
+            place-content
+            justify-items
+            align-items
+            place-items
+            grid-auto-columns
+            gris-auto-rows
+            grid-auto-flox
+            grid
+
+Item :      grid-column 1/-1 ppour prendre toute la ligne avec une cellule
+            grid-rows
+            grid-area
+            grid-column-start
+            grid-column-end
+            grid-row-start
+            grid-row-end
+            justify-self
+            align-self
+            place-self
+            grid-column-gap
+            gap: 25px 25px
+*/
+
+body{
+    background-color: #000;
+}
+.container{
+    border: 2px dashed #aa5230;
+    /*height:500px;
+    width: 800px;*/
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    grid-template-rows: 150px 150px;
+
+}
+.item{
+    border: 1px solid #221fb3;
+    background-color: #386ccc;
+    color: #fff;
+    font-weight: bolder;
+    padding: 10px;
+}

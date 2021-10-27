@@ -1,0 +1,23 @@
+
+.container{
+    border: 2px dashed #aa5230;
+    /*height:500px;
+    width: 800px;*/
+    display:grid;
+    grid-template-rows: auto  auto;
+    grid-template-columns: 1fr  1fr;
+    grid-template-areas:"tete  tete"
+                        "gauche  droite"
+                        "pied  pied";
+}
+.item{
+    border: 1px solid #221fb3;
+    background-color: #386ccc;
+    color: #fff;
+    font-weight: bolder;
+    padding: 10px;
+}
+header{grid-area:tete;}
+section{grid-area:gauche;}
+aside{grid-area:droite;}
+footer{grid-area:pied;}

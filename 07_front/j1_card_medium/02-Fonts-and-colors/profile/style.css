@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap');
+
+body {
+  background-color: #F7F7F7;
+}
+
+h2 {
+  color: #575F7D;
+  font-size: 200%;
+  font-family: 'Irish Grover', cursive;
+  line-height: 150%;
+}
+
+h3 {
+  color: #6B72E1;
+  font-size: 100%;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+li {
+  color: #7ECE97;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+p {
+  line-height: 150%;
+}
+a {
+  color: black;
+  text-decoration: none;
+  border: solid 1px;
+  background-color: aqua;
+  border-radius: 5px;
+  padding: 3px;
+}
+a:hover {
+  color: aqua;
+  background-color: black;
+}

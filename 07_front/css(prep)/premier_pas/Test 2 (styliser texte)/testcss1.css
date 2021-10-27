@@ -1,0 +1,45 @@
+h1{
+    margin-right: 150px;
+    margin-left:150px;
+    text-align: center;
+    text-shadow:2px -2px 15px rgb(56, 104, 167);
+    text-transform:;
+    font-size: 50px;
+    border: 4mm ridge #3d32dc99;
+    border-radius:5px;
+    /*overflow: 150px 300px;
+    border-spacing: 300px;*/
+    /*min-width: 200px;*/}   
+p{
+    font-style: ;
+    font-variant:;
+    font-weight: lighter;
+    font-size: 20px;        /* font-size:xx-small;
+                             font-size: 0.5em; la moitié de la taille police grp parent*/
+    line-height:25px ;      /*ecart ligne*/
+    font-family:monospace;
+    margin: 100px;
+    text-indent: 15px;}     /*text-overflow: clip ellipsis; couper le texte ou ...*/   
+span.gras{
+    font-weight: bold;}
+p.testp{
+    font-family:calibri;/*font:style variant weight height line height policere groupe tt dans un ordre precis*/             
+    text-transform:lowercase;
+    text-align: center;
+    margin: 100px;
+    letter-spacing: 5px;}
+div {   
+    text-align: center;
+    direction:initial;}   /*vertical-align: 25px -25px auto sub top super ;
+                            white-space:pre-wrap pre-line normal nowrap pre(garde le texte comme il est ds le html) 
+                            word-spacing word-breack:keep-all; word-wrap:normal;(ex casser url)
+                            letter-spacing
+                            ;*/
+body{
+     text-align: center;
+     background: linear-gradient(to right, rgb(91, 91, 194), rgb(37, 159, 175), rgb(91, 91, 194))}
+strong{
+    text-decoration:underline red;/*line color style*/
+    text-shadow:2px -1px 3px red; /* decalage a a ombre couleur*/}
+
+        

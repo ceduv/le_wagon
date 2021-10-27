@@ -1,0 +1,51 @@
+  /*commentaire en CSS*/
+header{
+      /*
+      <propriété>:<valeur>;
+      <propriété>:<valeur>;
+      <propriété>:<valeur>;
+      <propriété>:<valeur>;
+      */
+      width: 1000px;
+      margin:auto;
+      border: 2px solid rgb(0, 0, 0);
+      background: linear-gradient(to right, rgb(91, 91, 194), rgb(37, 159, 175), rgb(91, 91, 194))
+
+  }
+  footer{    
+    background-color:rgba(155, 188, 189, 0.918) ;
+    width:1000px;
+    margin:auto;
+    border: 2px solid rgb(0, 0, 0);
+  }
+  em{
+    background-color:rgba(189, 181, 155, 0.918) ; /*fond*/
+  }
+  p{
+    font-variant:small-caps; /*typo*/
+  }
+  #block{
+    border-radius:8px;
+    color:rgb(116, 202, 152);
+    background-color:rgba(189, 181, 155, 0.918)
+  }
+  span.text-red /*span.class*/{
+    color:red;
+  }
+  span.text-yellow{
+    color: yellow;
+  }
+  p span.text-yellow /*span.class + ref a p*/{
+    color: yellowgreen;
+  }
+  h1 span.text-yellow {
+    color: tomato;
+  }
+  #test{
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius:8px;
+    padding: 10px;
+  }
+  p[title=???] /* attribut */{
+  }

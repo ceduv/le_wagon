@@ -1,0 +1,32 @@
+html{
+    background-color: #fff;
+}
+body{
+    background-color: gray;
+    width: 800px;
+}
+div{
+    background-color: rgb(84, 148, 84);
+    width: 600px;
+    height: 400px;
+    padding-left: 50px;
+}
+p{
+    background-color: rgb(145, 54, 54);
+    width: 400px;
+    height: 30%;
+    padding: 25px;
+    overflow-wrap: break-word;
+}
+/*
+    width / min-width / max width
+    height
+padding:
+    padding-top
+    padding-bottom
+    padding-left
+    padding-right 
+    padding: top left right bottom;
+margin:
+    ...
+*/

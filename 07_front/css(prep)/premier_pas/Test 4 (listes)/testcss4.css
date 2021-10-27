@@ -1,0 +1,10 @@
+body{
+    background-color: gray;
+    margin: auto;
+    width: 1000px;}
+li{
+    list-style-image:url(puce2.jpg);
+    list-style-position: inside;
+    /*list-style-type: none; circle armenian */
+}
+        

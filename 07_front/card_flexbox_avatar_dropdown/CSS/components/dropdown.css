@@ -1,0 +1,12 @@
+.avatar-drop {
+  position: relative;
+  top: -50px;
+  right: -255px;
+}
+
+.avatar-drop:hover {
+  opacity: 0.8;
+  position: relative;
+  top: -50px;
+  right: -255px;
+}

@@ -1,0 +1,14 @@
+h1{
+    border: 4mm ridge #3d32dc99;
+    border-radius:5px;
+    padding: 20px;}   
+
+p{margin: 10px;
+    text-align: justify;
+    }
+.fleft{
+    float: left;
+}
+img{
+    margin: 10px;
+}
