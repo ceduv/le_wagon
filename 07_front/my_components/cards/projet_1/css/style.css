@@ -1,0 +1,29 @@
+/*Importing fonts*/
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Raleway:300,400,500,700");
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
+/* Importing all components file */
+@import url("components/btn.css");
+@import url("components/card.css");
+
+/* ROOT VAR */
+:root{
+  --clr-bg: hsl(323 21% 16%);
+  --clr-neutral-900: hsl(207 19% 9%);
+  --clr-neutral-100: hsl(0 0% 100%);
+  --clr-accent-400: hsl(142 90% 61%);
+  --clr-neon-green: hsl(109, 100%, 74%);
+}
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+}
+ /* SETUP DE BASE  */
+body {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  line-height: 1.6;
+  background: var(--clr-bg);
+  font-family: sans-serif;
+}
