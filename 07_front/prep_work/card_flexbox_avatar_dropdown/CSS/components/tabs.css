@@ -1,0 +1,30 @@
+.tabs {
+  background: rgb(161, 99, 99);
+  color: aliceblue;
+  display: flex;
+  padding: 10px 10px 0 10px;
+}
+.tabs h3 {
+  font-size: 17px;
+  font-weight: bold;
+}
+.tabs p {
+  opacity: 0.6;
+}
+.tabs-item {
+  margin-top: 6px;
+  background: rgb(194, 146, 146);
+  flex: 0 0 25%; /* 0 0 pas +||-  d espace fait25% de la flexbox */
+  text-align: center;
+}
+.tabs-item.active {
+  background: rgb(250, 250, 250);
+  color: black;
+}
+.tabs-item:first-child {
+  /* :first-child -> ref au premier tabs-item */
+  border-radius: 10px 0 0 0;
+}
+.tabs-item:last-child {
+  border-radius: 0 10px 0 0;
+}

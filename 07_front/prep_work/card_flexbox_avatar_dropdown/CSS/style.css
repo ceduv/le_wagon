@@ -1,0 +1,94 @@
+/* FONT IMPORT */
+/* POLICES  */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@300;600&family=Roboto:ital,wght@0,700;1,400&display=swap");
+
+/* COMPONNENTS DESIGN */
+@import url("components/avatar.css");
+@import url("components/btn.css");
+@import url("components/dropdown.css");
+@import url("components/card.css");
+@import url("components/banner.css");
+@import url("components/tabs.css");
+@import url("components/list.css");
+
+/*  FONT & COLORS */
+body {
+  background: rgba(245, 233, 233, 0.678);
+  color: A0937D;
+  font-family: "Montserrat", sans-serif;
+}
+h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 70px;
+  color: 5f939a;
+}
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+}
+a {
+  text-decoration: none;
+  color: 5f939a;
+}
+a:hover {
+  /* mouseover*/
+  text-decoration: none;
+  color: 3edbf0;
+}
+p {
+  font-size: 20px;
+}
+/* CUSTOM DESIGN */
+
+#banner {
+  /* #->id */
+  margin: 20px;
+  border: solid 1px;
+  border-color: #e4e3e3;
+  border-radius: 69px;
+  padding: 0px;
+  text-align: center;
+  box-shadow: 2px 2px 2px #cecece;
+  margin-block: 16px;
+  background-image: linear-gradient(
+      -225deg,
+      rgba(0, 101, 168, 0.6) 0%,
+      rgba(0, 36, 61, 0.6) 50%
+    ),
+    url("https://images.unsplash.com/photo-1621248439845-00ad5009e2f6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=600");
+  background-size: cover; /*  couvrir avec l image  */
+  margin-block-start: 22px;
+  margin-block-end: 7px;
+}
+#banner h1 {
+  /* call  id banner>h1 */
+  color: A0937D;
+}
+#banner p {
+  color: ivory;
+  font-size: 25px;
+  font-weight: lighter;
+  opacity: 0.8;
+}
+.features {
+  /* call class="features" */
+  padding: 50px;
+  text-align: center;
+}
+#footer {
+  background-color: ivory;
+  color: black;
+  font-size: 20px;
+  padding: 20px;
+}
+#footer a {
+  /* icone = text */
+  font-size: 50px;
+  color: gray;
+}
+#footer a:hover {
+  color: indianred;
+}
+.container {
+  margin: 5px;
+}
