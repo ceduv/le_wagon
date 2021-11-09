@@ -24,6 +24,8 @@ gem install activerecord -v 6.0
 
 gem install faker
 #---
+#*** add to gemfile + bundle install
+gem 'faker'
 # https://github.com/faker-ruby/faker#faker
 # https://kitt.lewagon.com/camps/730/lectures/03-AR-Database%2F03-ActiveRecord-Basics#source
 Faker::Address / Faker::Name / Faker::Lorem
