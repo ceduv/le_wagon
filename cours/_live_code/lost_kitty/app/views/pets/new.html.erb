@@ -1,0 +1,12 @@
+<div class="container py-5">
+  <h1>Add a pet</h1>
+
+  <%= simple_form_for(@pet) do |f| %>
+    <%= f.input :name, placeholder: 'Toutou' %>
+    <%= f.input :address %>
+    <%= f.input :species, collection: Pet::SPECIES %>
+    <%= f.input :found_at %>
+    <%= f.submit 'Add your animal', class: 'btn btn-primary' %>
+  <% end %>
+
+</div>

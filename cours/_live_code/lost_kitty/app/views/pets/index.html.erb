@@ -1,0 +1,24 @@
+<div class="container py-5">
+  <h1 class="mb-2">Lost Kitties 🙀</h1>
+
+  <div class="row">
+    <% @pets.each do |pet| %>
+      <div class="col-4">
+        <div class="card mt-4">
+          <div class="card-body">
+            <h5 class="card-title"><%= pet.name %></h5>
+            <h6 class="card-subtitle my-2 text-muted"><%= pet.address %></h6>
+            <p class="card-text">
+              <%= pet.species %>
+            </p>
+            <p class="card-text">
+              <%= pet.found_at %>
+            </p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <%= link_to 'Add an animal', new_pet_path, class: 'btn btn-primary mt-5' %>
+</div>
