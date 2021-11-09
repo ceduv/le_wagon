@@ -1,3 +1,5 @@
+#=============== FORM ====================
+
 <!-- app/views/restaurants/_form.html.erb -->
 <%= form_for(restaurant) do |f| %>
   <%= f.label :name %>
