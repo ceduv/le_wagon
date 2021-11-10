@@ -1,0 +1,23 @@
+<div class="container">
+  <h1 class='py-5'><%= @restaurant.name %></h1>
+  <ul>
+    <li><%= @restaurant.address %></li>
+    <li><%= @restaurant.phone_number %></li>
+    <li><%= @restaurant.category %> </li>
+  </ul>
+
+  <h3>Reviews</h3>
+  <% @reviews.each do |review| %>
+    <%= review.content %>
+    <%= review.rating %>
+    <br>
+  <% end %>
+
+  <h3 class='py-5'>Add a review</h3>
+  <%= simple_form_for([@restaurant, @review]) do |f| %>
+    <%= f.input :content, label: "write some text" %>
+    <%= f.input :rating, label: "give a rate" %>
+    <%= f.submit 'Give your advice' %>
+  <% end %>
+
+</div>

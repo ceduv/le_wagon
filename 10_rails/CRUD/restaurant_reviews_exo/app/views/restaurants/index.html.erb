@@ -1,0 +1,11 @@
+<div class="container">
+  <h1 class='py-5'> All Restaurants</h1>
+
+  <% @restaurants.each do |restaurant| %>
+  <%= link_to restaurant.name, restaurant_path(restaurant.id) %>
+  <%= restaurant.category %>
+  <br>
+  <% end %>
+
+  <%= link_to 'Add a new restaurant', new_restaurant_path, class: 'btn btn-primary my-5' %>
+</div>

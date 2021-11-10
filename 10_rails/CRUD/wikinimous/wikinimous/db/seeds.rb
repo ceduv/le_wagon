@@ -14,7 +14,7 @@ def fake_content
 end
 
 20.times do
-  Article.create(
+  Article.create!(
     title: Faker::Company.catch_phrase,
     content: fake_content
   )
