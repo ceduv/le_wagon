@@ -41,3 +41,11 @@ response = RestClient.get "https://api.github.com/users/lewagon/repos"
 repos = JSON.parse(response)    # => repos is an `Array` of `Hashes`.
 repos.size
 #---
+
+# FRONT
+autoprefixer 
+# to automatically put in css vendor prefixes to ensure all browser understand our css
+font-awesome-sass
+# for great icons
+simple_form
+# to be able to generate easily forms from our models
