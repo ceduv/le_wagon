@@ -1,0 +1,18 @@
+#======== CONFIG =============
+
+# config/storage.yml
+cloudinary:
+  service: Cloudinary
+  folder: <%= Rails.env %>
+
+
+# Replace :local by :cloudinary in the config:
+# config/environments/development.rb
+config.active_storage.service = :cloudinary
+# ⚠️ Don’t forget to restart your server after config edits!
+
+#
+Model
+class Article < ApplicationRecord
+  has_one_attached :photo
+end
