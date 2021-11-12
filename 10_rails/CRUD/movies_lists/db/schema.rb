@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2021_02_19_155458) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "bookmarks", force: :cascade do |t|
     t.text "comment"
     t.bigint "movie_id", null: false
