@@ -1,0 +1,236 @@
+.alexis-marketplace-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 91vh;
+  // position: relative;
+}
+
+.alexis-marketplace-second {
+  height: 100%;
+  width: 100%;
+}
+
+// LINK GENERAL
+
+.alexis-click {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+// MENU
+
+.alexis-marketplace-menu {
+  display: flex;
+  justify-content: center;
+  .marketplace-menu-element {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+
+    button {
+      background-color: transparent;
+      border: none;
+      color: white;
+    }
+
+    button:focus {
+      border-bottom: 2px solid white;
+    }
+
+    p {
+      font-size: 0.8rem;
+      font-weight: bold;
+      margin: 0;
+      color: white;
+    }
+  }
+}
+
+// NO LISTS
+
+.marketplace-text-empty {
+  h2 {
+    margin-top: 20px;
+    color: white;
+  }
+}
+
+// LISTS CONTAINER
+
+.alexis-marketplace-lists-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  overflow: scroll;
+  height: 100%;
+  position: fixed;
+  width: 100%;
+  .lists {
+    padding-bottom: 200px;
+  }
+}
+// CARD
+
+.alexis-marketplace-card {
+  position: relative;
+  margin: 10px;
+  border-radius: 12px;
+  background: linear-gradient(to right,#010234, #3F1964);
+  transition: 0.2s ease-in-out;
+
+
+  .alexis-marketplace-card-element {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    position: relative;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 800;
+  }
+
+  // LEFT ELEMENT
+
+  .alexis-card-left-element {
+    color: white;
+    p {
+      margin: 0;
+      font-family: 'Gilroy-Medium';
+      font-size: 0.8rem;
+    }
+
+    .alexis-user-email p {
+      font-family: 'Gilroy-Medium';
+      font-size: 0.9rem;
+    }
+
+    .alexis-user-email p span {
+      font-family: 'Gilroy-Medium';
+      font-size: 0.7rem;
+    }
+  }
+
+  // RIGHT ELEMENT
+
+  .alexis-card-right-element {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    p {
+      margin: 0;
+      font-family: 'Gilroy-Medium';
+      font-size: 0.7rem;
+    }
+
+    .alexis-card-show-btn {
+      background-color: #B000B9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 34px;
+      width: 36px;
+      border-radius: 12px;
+
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        height: 100%;
+        width: 100%;
+        font-weight: 400;
+        font-size: 1.25rem;
+      }
+    }
+
+  }
+}
+
+.alexis-marketplace-card:hover {
+  transform: scale(1.05);
+}
+
+.alexis-marketplace-container-create-btn {
+  // background: linear-gradient(to top, #FD7B7B 20%, transparent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 9vh;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background: #b011b9;
+
+  .alexis-marketplace-create-btn {
+    // background-color: #B000B9;
+    // height: 50px;
+    width: 100%;
+    border-radius: 50%;
+    transition: 0.2s ease-in-out;
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      color: white;
+      height: 100%;
+      width: 100%;
+      font-family: 'Gilroy-BoldItalic';
+      font-size: 26px;
+    }
+  }
+
+  .alexis-marketplace-create-btn:hover {
+    transform: scale(1.05);
+  }
+}
+
+.alexis-marketplace-container-create-btn:hover {
+  background-color: #cf35d9;
+}
+
+.div-my-shot {
+  width: 96.5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 340px) {
+  .alexis-marketplace-menu {
+    .marketplace-menu-element {
+      margin-top: 20px;
+      font-size: 0.9rem;
+    }
+  }
+}
+
+@media screen and (max-width: 290px) {
+  .alexis-marketplace-menu {
+    .marketplace-menu-element {
+      margin-top: 20px;
+      font-size: 0.8rem;
+    }
+  }
+}
+
+@media screen and (max-width: 374px) {
+
+  .alexis-card-right-element {
+    text-align: right;
+  }
+}

@@ -1,0 +1,67 @@
+.alexis-main-container-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 2rem;
+}
+
+.alexis-login-form-container {
+  background: linear-gradient(to right, #010234, #3F1964);
+  color: white;
+  padding: 20px 60px;
+  border-radius: 20px;
+
+  h2 {
+    text-align: center;
+    margin: 20px;
+  }
+
+  .form-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .form-actions input {
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    margin: 20px;
+    transition: 0.2s ease-in-out;
+  }
+
+  .form-check-input:checked {
+    background-color: black;
+    border-color: black;
+    color: black;
+  }
+
+  .form-actions input:hover {
+    background-color: white;
+    color: black;
+  }
+
+}
+
+.alexis-login-form-container .form-inputs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.alexis-login-bonus-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  a {
+    text-decoration: none;
+    color: white;
+    margin: 20px;
+  }
+
+  a:hover {
+    border-bottom: 1px solid white;
+  }
+}

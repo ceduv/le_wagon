@@ -1,0 +1,33 @@
+<div class="alexis-marketplace-main">
+  <div class="alexis-marketplace-second">
+
+    <div class="alexis-marketplace-menu">
+      <div class="marketplace-menu-element">
+        <button class='public' > Public </button>
+      </div>
+      <div class="marketplace-menu-element">
+        <button class='private' > My Lists </button>
+      </div>
+      <div class="marketplace-menu-element">
+        <button class='shotguns' > My Shotguns </button>
+      </div>
+    </div>
+
+    <div class="alexis-marketplace-lists-container">
+      <div class="div-public" data-controller="index-subscription">
+        <%= render "lists", lists: @lists %>
+      </div>
+      <div class="div-private d-none">
+        <%= render "lists", lists: @priv_lists %>
+      </div>
+      <div class="div-my-shot d-none">
+        <%= render "lists", lists: @shotguns %>
+      </div>
+    </div>
+  </div>
+  <div class="alexis-marketplace-container-create-btn">
+    <div class="alexis-marketplace-create-btn">
+      <%= link_to "Create new list", new_list_path %>
+    </div>
+  </div>
+</div>

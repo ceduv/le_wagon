@@ -1,0 +1,39 @@
+<div class="navbar">
+  <div class="left-element">
+      <div class="logo">
+        <%= link_to image_tag("pokeball.png"), root_path %>
+        <h1><%= link_to "Pokéshop", root_path, class:"alexis-logo-title" %></h1>
+      </div>
+      <div class="element">
+        <p class="sign-up-btn"><%= link_to 'Marketplace', pokemons_path, class:"Arti-btn-Mkt"%></p>
+      </div>
+  </div>
+  <div class="right-element">
+    <div class="element-search">
+      <%# couleur du placeholder a set %>
+      <!-- <input type="text" placeholder="Search your Team Mate"> -->
+      <%= form_tag pokemons_path, method: :get do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          placeholder: "Search a Pokemon"%>
+      <!-- <i class="fas fa-search"></i> -->
+      <% end %>
+    </div>
+    <% if user_signed_in? %>
+      <div class="sign-up-btn">
+        <%= link_to "Log Out", destroy_user_session_path,  method: :delete%>
+      </div>
+        <div class="sign-up-btn">
+          <%= link_to "My Profile", my_profile_profiles_path %>
+      </div>
+    <% else %>
+      <div class="sign-up-btn">
+        <%= link_to "Sign Up", new_user_registration_path %>
+      </div>
+      <div class="element">
+        <%= link_to "LOGIN", new_user_session_path %>
+      </div>
+    <% end %>
+  </div>
+</div>

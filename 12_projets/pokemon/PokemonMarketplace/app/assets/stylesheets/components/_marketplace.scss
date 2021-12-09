@@ -1,0 +1,185 @@
+.div-background {
+  height: 500vh;
+  background: linear-gradient(111.34deg, #21344B 0%, #648395 100%);
+}
+
+.title-market {
+  text-align: center;
+  color: white;
+  padding-top: 30px;
+}
+
+.exemple {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.container-main {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+// CONTAINER CARDS
+.list-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 80%;
+}
+
+// CARD
+.card-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+
+.list-cards .card {
+  z-index: 0;
+  height: 327px;
+  width: 241px;
+  background-color: #1A1E29;
+  color: white;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  transition: 0.2s ease-in-out;
+}
+
+.list-cards .card:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 64px 60px -39px rgba(0px, 0px, 0px, 0.4);
+}
+
+// IMAGE
+
+.img-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #638395;
+  margin-top: 16px;
+  height: 240px;
+  width: 208px;
+  border-radius: 20px;
+}
+
+.card-img img {
+  height: 190px;
+  width: 190px;
+}
+
+// INFO POKEMON
+
+.poke-info {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+// POKE NAME
+
+.poke-name {
+  margin-top: 8px;
+}
+
+.poke-name a {
+  text-decoration: none;
+  color: white;
+  font-size: larger;
+  display: inline-flex;
+}
+// PRICE
+
+.div-price {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  margin-left: 30px;
+}
+
+.div-price p {
+  margin: 0;
+}
+
+.price-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: small;
+  width: 100%;
+  margin-top: 10px;
+}
+// BUY BTN
+.poke-buy a {
+  text-decoration: none;
+  color: white;
+  font-size: small;
+  background-color: #4AE475;
+  padding: 5px 25px;
+  border-radius: 6px;
+}
+
+// ADD POKEMON BTN
+.add-poke {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  margin-right: 20px;
+}
+
+.add-poke p {
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: small;
+}
+
+.add-poke a {
+  background-color: #4AE475;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: xx-large;
+  color: white;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  margin: 20px;
+  margin-top: 0;
+  transition: 0.2s ease-in-out;
+}
+
+.add-poke a:hover {
+  background-color: #24d857;
+  transform: scale(1.12);
+  box-shadow: 0px 0px 39px 7px rgba(74px, 228px, 117px, 0.8);
+}
+
+// POKEMON NOT FOUND
+
+.alexis-pokemon-not-found {
+  display: flex;
+  flex-direction: column;
+}
+
+.alexis-pokemon-not-found h3 {
+  text-align: center;
+  color: white;
+}
+
+.alexis-pokemon-not-found img {
+  height: 350px;
+  width: 350px;
+  display: flex;
+}

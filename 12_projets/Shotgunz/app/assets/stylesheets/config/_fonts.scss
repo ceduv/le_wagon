@@ -1,0 +1,40 @@
+// Import Google fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
+
+// Define fonts for body and headers
+$body-font: "Work Sans", "Helvetica", "sans-serif";
+$headers-font: "Nunito", "Helvetica", "sans-serif";
+
+// To use a font file (.woff) uncomment following lines
+// @font-face {
+//   font-family: "Font Name";
+//   src: font-url('FontFile.eot');
+//   src: font-url('FontFile.eot?#iefix') format('embedded-opentype'),
+//        font-url('FontFile.woff') format('woff'),
+//        font-url('FontFile.ttf') format('truetype')
+// }
+// $my-font: "Font Name";
+
+@font-face {
+  font-family: "Gilroy-Medium";
+  src: font-url('Gilroy-Medium.ttf');
+}
+
+@font-face {
+  font-family: "Gilroy-Heavy";
+  src: font-url('Gilroy-Heavy.ttf');
+}
+
+@font-face {
+  font-family: "Gilroy-Bold";
+  src: font-url('Gilroy-Bold.ttf');
+}
+
+@font-face {
+  font-family: "Gilroy-HeavyItalic";
+  src: font-url('Gilroy-HeavyItalic.ttf');
+}
+@font-face {
+  font-family: "Gilroy-BoldItalic";
+  src: font-url('Gilroy-BoldItalic.ttf');
+}

@@ -1,0 +1,117 @@
+//NAVBAR CONTAINER
+.tanki-navbar {
+  height: 9vh;
+  width: 95% ;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tanki-navbar-container {
+  // background-color: pink;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 85%;
+  margin: 0 auto;
+}
+
+// MENU
+
+.tanki-burger-menu-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  .dropdown {
+    button {
+      background-color: white;
+      color: #BE1BAC;
+      border: none;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background-color: rgb(241, 241, 241);
+    }
+
+    button:focus {
+      box-shadow: none;
+    }
+
+    .login-btn-design {
+      background-color: white;
+      color: #BE1BAC;
+      text-decoration: none;
+      padding: 12px 8px;
+      border-radius: 5px;
+    }
+  }
+}
+
+.tanki-burger-menu-white-square {
+  background-color: white;
+  border-radius: 10px;
+  width: 43px;
+  height: 33px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .fas.fa-bars {
+    color: #B80DB3;
+  }
+}
+
+//SHOTGUN LOGO NAVBAR
+
+.shotgun-logo-navbar {
+  // background-color: red;
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shotgun-logo-navbar h3 {
+  margin-bottom: 0;
+  font-family: 'Gilroy-HeavyItalic';
+  font-size: 35px;
+  color: transparent;
+  -webkit-text-stroke: 1.5px;
+  -webkit-text-stroke-color: white;
+  margin-top: 3px;
+}
+
+@media screen and (max-width: 350px) {
+  .dropdown {
+    button {
+      height: 33px;
+      width: 23px;
+      padding: 5px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .login-btn-design {
+    height: 28px;
+    width: 20px;
+    font-size: 0.8rem;
+    font-weight: 900;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .dropdown {
+    button {
+      padding: 8px 18px !important
+    }
+  }
+
+  .shotgun-logo-navbar h3 {
+    font-size: 32px;
+  }
+}

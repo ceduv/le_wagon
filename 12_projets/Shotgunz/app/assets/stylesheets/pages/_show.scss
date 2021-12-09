@@ -1,0 +1,353 @@
+//SHOTGUNNERS LEFT
+
+.shotgunners-left {
+  // background-color: orange;
+  color: white;
+  margin-bottom: 10px;
+
+  p {
+    font-family: 'Gilroy-Medium';
+    font-size: 15px;
+    margin: 0;
+  }
+
+  span {
+    font-size: 15px;
+    font-family: 'Gilroy-Bold';
+  }
+}
+
+//BACK TO LIST AND DELETE CONTAINER
+.top-container {
+  max-width: 400px;
+  min-width: 300px;
+}
+
+.top-container a {
+  color: white;
+  font-size: 15px;
+  font-family: 'Gilroy-Medium';
+  width: auto;
+  margin-bottom: 0;
+}
+
+.back-to-list-btn .fas.fa-arrow-left {
+  color: white;
+  font-size: 15px;
+  margin-left: 1px;
+}
+
+.back-to-list-btn p {
+  color: white;
+  font-size: 15px;
+  font-family: 'Gilroy-Medium';
+  margin-left: 10px;
+  width: auto;
+  margin-bottom: 0;
+  padding-top: 3px;
+}
+
+
+// LIST SHOW SCOPING
+.list-show {
+  a {
+  text-decoration: none;
+  }
+
+  .aos-init {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  // CARD CONTAINER
+  .card-container {
+    background: linear-gradient(to right, #010234, #3F1964);
+    border-radius: 12px;
+    height: auto;
+    width: 85%;
+    max-width: 400px;
+    min-width: 300px;
+  }
+
+  .card-container-flexbox {
+    height: 100%;
+    width: 80%;
+  }
+
+  // CARD TITLE
+  .card-title {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    // background-color: blue;
+    height: auto;
+    color: white;
+  }
+
+  .card-title h1 {
+    font-size: 30px;
+    font-family: 'Gilroy-Bold';
+  }
+
+  // CARD CREATOR CONTAINER
+  .card-creator-name {
+    // background-color: green;
+    color: white;
+    margin-bottom: 10px;
+  }
+
+  .card-creator-name p {
+    color: white;
+    font-size: 0.8rem;
+    font-family: 'Gilroy-Medium';
+    margin: 0;
+  }
+
+  .card-creator-name p span {
+    color: white;
+    font-size: 0.9rem;
+    font-family: 'Gilroy-Medium';
+  }
+
+  //CARD CREATION TIME
+  .card-creation-time {
+    // background-color: green;
+    color: white;
+    margin-bottom: 10px;
+  }
+
+  .card-creation-time p {
+    font-size: 0.8rem;
+    font-family: 'Gilroy-Medium';
+    margin: 0;
+  }
+
+  // CARD DESCRIPTION
+  .card-description {
+    // background-color: red;
+    margin-bottom: 20px;
+    color: white;
+  }
+
+  .card-description p {
+    color: white;
+    font-size: 14px;
+    font-family: 'Gilroy-Medium';
+    margin: 0;
+  }
+
+  .card-description p span {
+    color: white;
+    font-size: 14px;
+    font-family: 'Gilroy-Bold';
+  }
+
+  // SHOTGUNERS CONTAINER
+  .shotgunners-title {
+    // background-color: orange;
+    color: white;
+    margin-bottom: 10px;
+  }
+
+  .shotgunners-title h2 {
+    font-size: 24px;
+    font-family: 'Gilroy-Bold';
+    margin: 0;
+  }
+
+  // SHOTGUNERS CARD LIST
+  .shotgunners-list {
+    // background-color: blue;
+    margin-bottom: 15px;
+    max-height: 200px;
+    overflow-y: scroll;
+    color: white;
+    margin-left: 10px;
+    width: 100%;
+  }
+
+  .shotgunners-list p .fas.fa-arrow-right {
+    font-size: 12px;
+  }
+
+  .shotgunners-list p {
+    font-size: 15px;
+    font-family: 'Gilroy-Medium';
+    margin-bottom: 5px;
+  }
+
+  // WINNER
+  .shotgunners-list {
+    i.winner {
+      color: rgb(49, 218, 114);
+    }
+    i.waitlist {
+      color: rgb(218, 49, 215);
+    }
+  }
+
+  // WAITER
+  .shotgunners-list {
+    i.waitlist {
+      height: 15px;
+      width: 15px;
+    }
+  }
+
+
+  // SHARING LINK CONTAINER
+  .sharing-link-container {
+    // background-color: yellowgreen;
+    margin-bottom: 15px;
+  }
+
+  .sharing-link-tagline {
+    // background-color: pink;
+    height: auto;
+    display: flex;
+    button {
+      border: none;
+    }
+
+    .share-link-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .sharing-link-tagline p{
+    color: white;
+    font-size: 15px;
+    font-family: 'Gilroy-Heavy';
+    margin: 0;
+  }
+
+  .copy-link {
+    display: flex;
+  }
+
+  .sharing-link-logo {
+    display: flex;
+    background-color: #A002AD;
+    color: white;
+    height: 100%;
+    width: 120px;
+    border-radius: 10px;
+    margin-left: 10px;
+  }
+
+  .sharing-link-logo .fas.fa-link {
+    font-size: 12px;
+  }
+
+  //SHOTGUN & CANCEL CTA
+  .shotgun-cta {
+    margin-bottom: 0;
+    font-family: 'Gilroy-HeavyItalic';
+    font-size: 26px;
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: white;
+    margin-bottom: 10px;
+  }
+
+  // BTN SHOTGUN
+  .ced-btn-show{
+    display: flex;
+    justify-content: center;
+  }
+
+}
+
+// CHATROOM BTN
+.block-chat {
+  color: white;
+  font-size: 15px;
+  font-family: 'Gilroy-Medium';
+  margin-left: 10px;
+  width: auto;
+  margin-bottom: 0;
+  padding-top: 3px;
+}
+
+.chatroom-btn-access {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 60px;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    background: linear-gradient(to right, #010234, #3F1964);
+    border: none;
+    transition: 0.2s ease-in-out;
+  }
+
+  button:hover {
+    transform: scale(1.10);
+    box-shadow: 0px 0px 20px #F48DF0;
+  }
+
+  button:focus {
+    border: none;
+    box-shadow: none;
+  }
+  i {
+    color: white;
+  }
+}
+
+// CHATROOM DESIGN
+.modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  #message_content {
+    background: white;
+    color: black;
+    border-radius: 0px;
+    border: 1px solid #BA13AF;
+  }
+
+  #new_message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  input {
+    background: #BA13AF;
+    border: none;
+    color: white;
+    border-radius: 20px;
+    padding: 10px 20px;
+  }
+}
+
+// CHATROOM MESSAGES
+
+#staticBackdrop {
+  padding-right: 0px !important;
+}
+
+.modal-body {
+  .messages {
+    height: 240px;
+    overflow: scroll;
+  }
+}
+
+.modal-backdrop {
+  height: 100%;
+  width: 100%;
+}

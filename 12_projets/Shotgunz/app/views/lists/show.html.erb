@@ -1,0 +1,75 @@
+<!-- Meta tags for lists -->
+<% content_for :meta_title, "#{@list.name} is on #{DEFAULT_META["meta_product_name"]}" %>
+<% content_for :meta_description, @list.description %>
+
+
+<div class="list-show d-flex align-items-center justify-content-center flex-column">
+  <div data-aos="fade-up-left" data-aos-delay="300">
+    <div class="top-container d-flex align-items-center w-85 mb-3">
+      <div class="back-to-list-btn w-50 d-flex align-items-center justify-content-start ">
+        <%= link_to lists_path, class:"d-flex align-items-center justify-content-center" do %>
+          <i class="fas fa-arrow-left"></i>
+          <p>Back to list</p>
+        <% end %>
+      </div>
+      <div class="delete-list-btn w-50 d-flex align-items-center justify-content-end">
+        <%= check_delete_btn %>
+      </div>
+    </div>
+  </div>
+
+  <div data-aos="flip-right" data-aos-delay="300">
+    <div class="card-container d-flex align-items-center justify-content-center flex-column">
+      <div class="card-container-flexbox d-flex align-items-start justify-content-heavenly flex-column">
+        <div class="card-title">
+          <h1><%= @list.name.titleize %></h1>
+        </div>
+        <div class="card-creator-name">
+          <p>Created by: <span><%= @list.user.username.capitalize %></span></p>
+        </div>
+        <div class="card-creation-time">
+          <p>Finishes <%=@list.end_time.strftime('%A %-d %b at %R %p')%></p>
+        </div>
+        <div class="card-description">
+          <p><span>Description: </span><%= @list.description.capitalize %></p>
+        </div>
+        <div class="shotgunners-title">
+          <h2>Shotgunners</h2>
+        </div>
+        <div class="shotgunners-left">
+          <%= render 'shared/shotgunners_left', list: @list %>
+        </div>
+        <div class="shotgunners-list">
+          <%# class winner et waitlist selon places => shared/winner %>
+          <%= render 'shared/winner' %>
+        </div>
+        <div class="bottom-sharing-link-container d-flex align-items-center justify-content-center w-100 mb-1">
+          <div class="sharing-link-container d-flex align-items-center justify-content-center">
+            <div data-controller="clipboard" data-clipboard-success-content="Copied!" class="sharing-link-tagline" data-clipboard-success-value="Copied!">
+              <input type="hidden" value='http://www.shotgunz.net/lists/<%=@list.id%>' data-clipboard-target="source" id="LinkInput">
+              <div class="share-link-btn">
+                <button type="button" data-action="click->clipboard#copy" data-clipboard-target="button" class="sharing-link-logo d-flex align-items-center justify-content-center">
+                Share Link</button>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+</div>
+<div data-aos="fade-up-right" data-aos-delay="300" class="ced-btn-show">
+  <%= check_shotgun_btn %>
+</div>
+
+
+<%# CHAT NON DISPO SI UNLOG && CHAT ACTIF SI SHOTGUN %>
+<!-- If current time is inferior to end time -> The list is shotgunnable -->
+<% if DateTime.now < (@list.end_time - 1.hours) %>
+  <!-- Is user part of the shotgunners -->
+  <% if !current_user.nil? && @list.shotguns.any? { |shot| shot.user_id == current_user.id } %>
+    <%= render "chatlist" %>
+  <% end %>
+<%# if current time is superior to list end time -> The list is closed & the user is a winner %>
+<% elsif DateTime.now > (@list.end_time - 1.hours) && @list.shotguns.first(@list.places).any? { |shot| shot.user_id == current_user.id }%>
+<%# BUTTON TRIGGER MODAL %>
+    <%= render "chatlist" %>
+<% end %>

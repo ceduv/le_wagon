@@ -1,0 +1,206 @@
+// Specific CSS for your home-page
+body {
+  height: 100%;
+  background: linear-gradient(111.34deg, #21344B 0%, #648395 100%);
+  background-attachment: fixed;
+  font-family: 'Roboto';
+}
+
+// NAVBAR
+.navbar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-evenly;
+  height: 15vh;
+  width: 100%;
+  color: white;
+  z-index: 1;
+  background: linear-gradient(#21344B ,transparent);
+  backdrop-filter: blur(0.9px);
+}
+
+// NAVBAR LOGO
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo h1 a {
+  font-size: 24px;
+  font-weight: 400;
+  color: white;
+  text-decoration: none;
+  margin: 0;
+  margin-right: 15px;
+}
+
+.logo h1 a:hover {
+  color: white;
+}
+
+.left-element {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: larger;
+  font-weight: lighter;
+}
+
+.left-element p {
+  margin: 0;
+}
+
+.left-element img {
+  margin: auto;
+  height: 35px;
+  width: 35px;
+  margin-right: 10px;
+}
+
+.element {
+  margin: 20px;
+}
+
+.Arti-btn-Mkt {
+  color: white;
+  text-decoration: none;
+  font-weight: normal;
+  transition: 0.2s ease-in-out;
+}
+
+.Arti-btn-Mkt:hover {
+  color: #dbdbdb;
+  border-bottom: 1px solid #dbdbdb;
+}
+
+
+// NAVBAR - BARRE DE RECHERCHE
+.element-search {
+  margin: 20px;
+  position: relative;
+  color: white;
+  font-size: medium;
+}
+
+.element-search input {
+  color: white;
+  font-size: medium;
+  padding-left: 15px;
+}
+
+.element-search img {
+  height: 20px;
+  width: 20px;
+  left: 10px;
+  bottom: 7px;
+}
+
+.element-search input::placeholder {
+  color: white;
+}
+
+
+.right-element {
+  display: flex;
+  align-items: center;
+}
+
+.right-element input {
+  border: none;
+  background-color: #638395;
+  height: 30px;
+  width: 280px;
+  border-radius: 20px;
+}
+
+.right-element a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 5px;
+  color: white;
+  background-color: #638395;
+  height: 42px;
+  width: 116px;
+}
+
+.right-element .sign-up-btn a {
+  background-color: transparent;
+  color: white;
+  background-color: transparent;
+}
+
+.right-element .sign-up-btn a:hover {
+
+}
+
+
+
+// BACKGROUND IMAGE
+.img-information {
+  width: 60vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+// SECTION INFO
+.header-container {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  // margin: 190px;
+}
+
+.text-information {
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  justify-content: center;
+  width: 812px;
+  padding-left: 183px;
+  padding-right: 75px;
+}
+
+
+.text-information h1 {
+  font-family: 'Roboto';
+  font-weight: lighter;
+  margin-bottom: 20px;
+}
+
+.text-information p {
+  font-weight: lighter;
+  margin-bottom: 20px;
+}
+
+.header-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 5px;
+  color: white;
+  background: linear-gradient(45deg, #B558B1 ,#7681f8);
+  height: 42px;
+  width: 230px;
+}
+
+.header-btn a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f9fafb;
+  text-decoration: none;
+  font-weight: lighter;
+  font-size: medium;
+  height: 100%;
+  width: 100%;
+}

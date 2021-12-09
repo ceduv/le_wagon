@@ -1,0 +1,492 @@
+
+//CARD CONTAINER
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.back-to-pokemons {
+  position: absolute;
+  margin-top: 5px;
+  top: -48px;
+  left: -56px;
+  text-decoration: none;
+  color: white;
+  transition: 0.5s all ease;
+  &:hover {
+    color: rgb(200, 200, 200);
+  }
+  i {
+    margin-right: 10px;
+  }
+  span {
+    display: flex;
+    align-items: center;
+  }
+}
+
+
+.tanki-card-container {
+  position: relative;
+  display: flex;
+  width: 900px;
+  height: 500px;
+  background-color: #1a1d289c;
+  border-radius: 19px;
+  margin-top: 45px;
+  // border: 1px solid greenyellow;
+}
+
+// POKEDEX
+.alexis-pokedex-link {
+  position: absolute;
+  right: 40px;
+  top: 30px;
+}
+
+.alexis-pokedex-link img {
+  height: 60px;
+  width: 60px;
+}
+
+//IMAGE CONTAINER
+.tanki-img-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  // border: 1px solid red;
+}
+
+.pokemon-img{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #648395;
+  width: 370px;
+  height: 475px;
+  justify-content: center;
+  border-radius: 19px;
+}
+
+.pokemon-img img {
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  width: 300px;
+}
+
+//POKEMON INFORMATION
+.information-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 500px;
+}
+
+.information-container a {
+  color: white;
+}
+
+.pokemon-information{
+  // border: 1px solid blue;
+  width: 450px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+//POKEMON NAME DIV
+.pokemon-name{
+  // border: 1px solid purple;
+  width: 400px;
+  height: 50px;
+}
+
+  .pokemon-name h2{
+    font-family: 'Roboto';
+    font-size: 48px;
+    color: white;
+  }
+
+//POKEMON RENTER DIV
+.pokemon-renter{
+  // border: 1px solid purple;
+  width: 400px;
+  height: 30px;
+}
+
+  .pokemon-renter h4 {
+    font-family: 'Roboto';
+    font-weight: normal;
+    font-size: 18px;
+    color: white;
+  }
+
+//POKEMON DESCRIPTION DIV
+.pokemon-description {
+  // border: 1px solid purple;
+  width: 400px;
+  height: 80px;
+  margin-bottom: 10px;
+}
+
+  .pokemon-description p {
+      font-family: 'Roboto';
+      font-weight: normal;
+      font-size: 18px;
+      color: white;
+    }
+
+//POKEMON TYPE DIV
+.pokemon-type{
+  // border: 1px solid purple;
+  background-color: #08090c5b;
+  border-radius: 19px;
+  width: 450px;
+  height: 65px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+  .pokemon-type .type{
+    // border: 1px solid pink;
+    width: 380px;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:flex-start ;
+  }
+
+    .text{
+      // border: 1px solid lightskyblue;
+      width: 150px;
+      height: 30px;
+    }
+
+    .text h4{
+      font-family: 'Roboto';
+      font-weight: normal;
+      font-size: 18px;
+      color: white;
+    }
+
+    .type-tag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    color: white;
+    height: 25px;
+    width: 130px;
+    margin-left: 15px;
+  }
+
+  .arti-tag {
+    display: flex;
+  }
+
+  .type-tag h4 {
+    margin: 0;
+  }
+
+  .weakness-tag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    color: white;
+    background: linear-gradient(45deg, #e4dc48 ,#898709);
+    height: 25px;
+    width: 130px;
+    margin-left: 15px;
+  }
+
+  .weakness-tag h4 {
+    margin: 0;
+  }
+
+    .type-tag h4{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Roboto';
+      font-weight: 300;
+      font-size: 15px;
+      color: white;
+      margin: 0;
+    }
+
+//POKEMON PRICE DIV
+.pokemon-price{
+  // border: 1px solid purple;
+  background-color: #08090c5b;
+  border-radius: 19px;
+  width: 450px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1.5rem;
+}
+
+.price-and-form {
+  width: 100%;
+  justify-content: space-between;
+}
+
+#calculate-price {
+  width: 100%;
+  text-align: right;
+  margin-top: 0.7rem;
+}
+
+  .current-price{
+    // border: 1px solid lightskyblue;
+    width: 150px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+    .label{
+    // border: 1px solid lightgreen;
+    width: 150px;
+    height: 40px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+      h4 {
+      font-family: 'Roboto';
+      font-weight: normal;
+      font-size: 18px;
+      color: white;
+      }
+
+    .price {
+      // border: 1px solid lightgreen;
+      width: 150px;
+      height: 40px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+       h2 {
+        font-family: 'Roboto';
+        font-weight: normal;
+        font-size: 30px;
+        color: white;
+        }
+
+    .price .hours-show {
+      font-size: 20px;
+    }
+
+.class-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.class-label {
+  margin-bottom: 0;
+}
+
+.class-input {
+  width: 30%;
+}
+// RENT BUTTON DIV
+.rent-button {
+  border-radius: 5px;
+  color: white;
+  width: 230px;
+}
+
+  .rent-button input {
+    height: 100%;
+    width: 100%;
+    color: white;
+    font-weight: 300;
+    font-size: medium;
+    margin: 0;
+  }
+
+  .rent-button input:hover {
+    color: white;
+  }
+
+  .alexis-book-btn-show {
+    width: 100%;
+    border-radius: 5px;
+  }
+
+  .alexis-book-btn-show form {
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    // width: 100%;
+  }
+
+  .alexis-book-btn-show input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    font-weight: 400;
+    font-size: medium;
+    background: linear-gradient(45deg, #B558B1 ,#7681f8);
+  }
+
+  .duration {
+    width: 50%;
+  }
+
+
+  // DELETE BTN
+
+  .alexis-delete-show-btn {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+  }
+
+  .alexis-delete-show-btn a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    font-weight: 400;
+    font-size: medium;
+  }
+
+  .arti-btn {
+    background: rgb(182, 59, 59);
+  }
+
+  .alexis-delete-show-btn a:hover {
+    color: white;
+  }
+
+  // MARKET PLACE BTN
+
+  .alexis-marketbtn-show {
+    text-decoration: none;
+    border-radius: 5px;
+    color: white;
+    background: linear-gradient(to right, #B558B1 0%, #7681f8 100%);
+    height: 42px;
+    width: 230px;
+    margin-top: 50px;
+  }
+
+  .alexis-marketbtn-show a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    height: 100%;
+    width: 100%;
+  }
+
+  .alexis-marketbtn-show a:hover {
+    color: white;
+  }
+
+
+  // Types
+
+  .Grass {
+    background-color: #9bcc50;
+  }
+
+  .Fire {
+    background-color: #fd7d24;
+  }
+
+  .Water {
+    background-color: #4592c4;
+  }
+
+  .Ground {
+    background: linear-gradient(
+    180deg, #f7de3f 50%, #ab9842 50%);
+  }
+
+   .Flying {
+    background: linear-gradient(
+    180deg, #3dc7ef 50%, #bdb9b8 50%);
+  }
+
+  .Rock {
+    background-color: #a38c21;
+  }
+
+  .Electric {
+    background-color: #EED535;
+  }
+
+  .Ice {
+    background-color: #51C3E7;
+  }
+
+  .Dragon {
+    background: linear-gradient(
+    180deg, #53a4cf 50%, #f16e57 50%);
+  }
+
+  .Bug {
+    background-color: #719F3E;
+  }
+
+  .Psychic {
+    background-color: #F365B9;
+  }
+
+  .Dark {
+    background-color: #707070;
+  }
+
+  .Ghost {
+    background-color: #7B62A3;
+  }
+
+  .Fairy {
+    background-color: #FCB9E8;
+  }
+
+  .Normal {
+    background-color: #A3ABAE;
+  }
+
+  .Steel {
+    background-color: #9DB7B7;
+  }
+
+  .Fighting {
+    background-color: #D56722;
+  }
+
+  .Poison {
+    background-color: #B87EC8;
+  }
+
+  #percent-span{
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #4AE475;
+  }
