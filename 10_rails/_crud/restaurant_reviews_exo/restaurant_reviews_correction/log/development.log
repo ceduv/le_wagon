@@ -1,0 +1,900 @@
+  [1m[35m (3.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (6.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateRestaurants (20211110082114)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "restaurants" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "address" varchar, "stars" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20211110082114"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-11-10 08:26:02.157198"], ["updated_at", "2021-11-10 08:26:02.157198"]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2021-11-10 09:26:25 +0100
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/dianejohnston/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/dianejohnston/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 63.8ms | Allocations: 525)
+Completed 200 OK in 117ms (Views: 77.1ms | ActiveRecord: 0.0ms | Allocations: 7068)
+
+
+Started GET "/" for ::1 at 2021-11-10 09:26:26 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/dianejohnston/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/dianejohnston/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 10.1ms | Allocations: 226)
+Completed 200 OK in 21ms (Views: 13.5ms | ActiveRecord: 0.0ms | Allocations: 3548)
+
+
+Started GET "/restaurants" for ::1 at 2021-11-10 09:26:33 +0100
+Processing by RestaurantsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering restaurants/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurants/index.html.erb:16
+  Rendered restaurants/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1064)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/dianejohnston/code/restaurant-reviews/public/packs
+[Webpacker] Hash: e2a8a876c5815bee1e21
+Version: webpack 4.46.0
+Time: 2695ms
+Built at: 11/10/2021 9:26:41 AM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-e421b4aa3f716bebdab1.js    125 KiB  application  [emitted] [immutable]  application
+js/application-e421b4aa3f716bebdab1.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-e421b4aa3f716bebdab1.js js/application-e421b4aa3f716bebdab1.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 7773.1ms | Allocations: 87544)
+Completed 200 OK in 7790ms (Views: 7775.7ms | ActiveRecord: 0.2ms | Allocations: 91720)
+
+
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRestaurant Create (0.5ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "address", "stars", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Dishoom"], ["address", "7 Boundary St, London E2 7JE"], ["stars", 5], ["created_at", "2021-11-10 08:30:05.778190"], ["updated_at", "2021-11-10 08:30:05.778190"]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRestaurant Create (0.4ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "address", "stars", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Pizza East"], ["address", "56A Shoreditch High St, London E1 6PQ"], ["stars", 4], ["created_at", "2021-11-10 08:30:05.784211"], ["updated_at", "2021-11-10 08:30:05.784211"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "restaurants"[0m
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" ORDER BY "restaurants"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/restaurants" for ::1 at 2021-11-10 09:30:35 +0100
+Processing by RestaurantsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering restaurants/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurants/index.html.erb:16
+  Rendered restaurants/index.html.erb within layouts/application (Duration: 10.8ms | Allocations: 4916)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20.9ms | Allocations: 12148)
+Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.7ms | Allocations: 12579)
+
+
+Started GET "/restaurants/1" for ::1 at 2021-11-10 09:30:45 +0100
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:51:in `set_restaurant'
+  Rendering layout layouts/application.html.erb
+  Rendering restaurants/show.html.erb within layouts/application
+  Rendered restaurants/show.html.erb within layouts/application (Duration: 6.6ms | Allocations: 324)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 25.6ms | Allocations: 7596)
+Completed 200 OK in 70ms (Views: 26.4ms | ActiveRecord: 0.3ms | Allocations: 11668)
+
+
+Started GET "/restaurants/1/edit" for ::1 at 2021-11-10 09:30:48 +0100
+Processing by RestaurantsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:51:in `set_restaurant'
+  Rendering layout layouts/application.html.erb
+  Rendering restaurants/edit.html.erb within layouts/application
+  Rendered restaurants/_form.html.erb (Duration: 143.5ms | Allocations: 23914)
+  Rendered restaurants/edit.html.erb within layouts/application (Duration: 147.0ms | Allocations: 25070)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 156.0ms | Allocations: 32201)
+Completed 200 OK in 162ms (Views: 156.7ms | ActiveRecord: 0.2ms | Allocations: 33316)
+
+
+Started GET "/restaurants" for ::1 at 2021-11-10 09:30:49 +0100
+Processing by RestaurantsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering restaurants/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurants/index.html.erb:16
+  Rendered restaurants/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 936)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 26.2ms | Allocations: 9087)
+Completed 200 OK in 28ms (Views: 26.8ms | ActiveRecord: 0.2ms | Allocations: 9514)
+
+
+Started GET "/restaurants" for ::1 at 2021-11-10 09:41:39 +0100
+Processing by RestaurantsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering restaurants/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/restaurants/index.html.erb:16
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurants/index.html.erb:16
+  Rendered restaurants/index.html.erb within layouts/application (Duration: 9.9ms | Allocations: 4904)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20.4ms | Allocations: 12294)
+Completed 200 OK in 26ms (Views: 23.4ms | ActiveRecord: 0.5ms | Allocations: 13784)
+
+
+Started GET "/restaurants/top" for ::1 at 2021-11-10 09:41:44 +0100
+Processing by RestaurantsController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering restaurants/top.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."stars" = ?[0m  [["stars", 5]]
+  ↳ app/views/restaurants/top.html.erb:16
+  Rendered restaurants/top.html.erb within layouts/application (Duration: 16.1ms | Allocations: 1129)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 29.1ms | Allocations: 8361)
+Completed 200 OK in 31ms (Views: 29.7ms | ActiveRecord: 0.2ms | Allocations: 8941)
+
+
+Started GET "/restaurants/new" for ::1 at 2021-11-10 09:41:48 +0100
+Processing by RestaurantsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering restaurants/new.html.erb within layouts/application
+  Rendered restaurants/_form.html.erb (Duration: 18.3ms | Allocations: 6346)
+  Rendered restaurants/new.html.erb within layouts/application (Duration: 20.3ms | Allocations: 6709)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 52.3ms | Allocations: 14754)
+Completed 200 OK in 55ms (Views: 53.1ms | ActiveRecord: 0.0ms | Allocations: 15321)
+
+
+Started POST "/restaurants" for ::1 at 2021-11-10 09:41:59 +0100
+Processing by RestaurantsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "restaurant"=>{"name"=>"surprise", "address"=>"16 ville gaudelet", "stars"=>"5"}, "commit"=>"Create Restaurant"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/restaurants_controller.rb:31:in `create'
+  [1m[36mRestaurant Create (0.7ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "address", "stars", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "surprise"], ["address", "16 ville gaudelet"], ["stars", 5], ["created_at", "2021-11-10 08:41:59.138304"], ["updated_at", "2021-11-10 08:41:59.138304"]]
+  ↳ app/controllers/restaurants_controller.rb:31:in `create'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/restaurants_controller.rb:31:in `create'
+Redirected to http://localhost:3000/restaurants/3
+Completed 302 Found in 12ms (ActiveRecord: 1.8ms | Allocations: 2648)
+
+
+Started GET "/restaurants/3" for ::1 at 2021-11-10 09:41:59 +0100
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:56:in `set_restaurant'
+  Rendering layout layouts/application.html.erb
+  Rendering restaurants/show.html.erb within layouts/application
+  Rendered restaurants/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 292)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | Allocations: 7523)
+Completed 200 OK in 18ms (Views: 14.6ms | ActiveRecord: 0.2ms | Allocations: 8747)
+
+
+Started GET "/restaurants" for ::1 at 2021-11-10 09:42:00 +0100
+Processing by RestaurantsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering restaurants/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurants/index.html.erb:16
+  Rendered restaurants/index.html.erb within layouts/application (Duration: 21.2ms | Allocations: 1041)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 40.5ms | Allocations: 9190)
+Completed 200 OK in 44ms (Views: 41.0ms | ActiveRecord: 0.2ms | Allocations: 9618)
+
+
+Started GET "/restaurants/top" for ::1 at 2021-11-10 09:42:03 +0100
+Processing by RestaurantsController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering restaurants/top.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."stars" = ?[0m  [["stars", 5]]
+  ↳ app/views/restaurants/top.html.erb:16
+  Rendered restaurants/top.html.erb within layouts/application (Duration: 3.0ms | Allocations: 947)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.4ms | Allocations: 8177)
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.1ms | Allocations: 8628)
+
+
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddChefNameToRestaurants (20211110084759)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "restaurants" ADD "chef_name" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20211110084759"]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRestaurant Destroy (0.5ms)[0m  [1m[31mDELETE FROM "restaurants" WHERE "restaurants"."id" = ?[0m  [["id", 1]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRestaurant Destroy (0.3ms)[0m  [1m[31mDELETE FROM "restaurants" WHERE "restaurants"."id" = ?[0m  [["id", 2]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRestaurant Destroy (0.3ms)[0m  [1m[31mDELETE FROM "restaurants" WHERE "restaurants"."id" = ?[0m  [["id", 3]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRestaurant Create (0.4ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "address", "stars", "created_at", "updated_at", "chef_name") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Dishoom"], ["address", "7 Boundary St, London E2 7JE"], ["stars", 5], ["created_at", "2021-11-10 08:49:25.372416"], ["updated_at", "2021-11-10 08:49:25.372416"], ["chef_name", "Philippe Etch"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRestaurant Create (0.4ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "address", "stars", "created_at", "updated_at", "chef_name") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Pizza East"], ["address", "56A Shoreditch High St, London E1 6PQ"], ["stars", 4], ["created_at", "2021-11-10 08:49:25.377563"], ["updated_at", "2021-11-10 08:49:25.377563"], ["chef_name", "Gordon Ramsey"]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" ORDER BY "restaurants"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/restaurants/top" for ::1 at 2021-11-10 09:51:38 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RestaurantsController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering restaurants/top.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."stars" = ?[0m  [["stars", 5]]
+  ↳ app/views/restaurants/top.html.erb:16
+  Rendered restaurants/top.html.erb within layouts/application (Duration: 7.6ms | Allocations: 3786)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.6ms | Allocations: 11174)
+Completed 200 OK in 22ms (Views: 19.3ms | ActiveRecord: 0.2ms | Allocations: 12977)
+
+
+Started GET "/restaurants" for ::1 at 2021-11-10 09:51:45 +0100
+Processing by RestaurantsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering restaurants/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurants/index.html.erb:16
+  Rendered restaurants/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1218)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 26.5ms | Allocations: 8450)
+Completed 200 OK in 29ms (Views: 26.9ms | ActiveRecord: 0.2ms | Allocations: 8999)
+
+
+Started GET "/restaurants" for ::1 at 2021-11-10 09:51:46 +0100
+Processing by RestaurantsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering restaurants/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurants/index.html.erb:16
+  Rendered restaurants/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 935)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.1ms | Allocations: 8165)
+Completed 200 OK in 20ms (Views: 18.6ms | ActiveRecord: 0.2ms | Allocations: 8586)
+
+
+Started GET "/restaurants/5" for ::1 at 2021-11-10 09:51:53 +0100
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:61:in `set_restaurant'
+  Rendering layout layouts/application.html.erb
+  Rendering restaurants/show.html.erb within layouts/application
+  Rendered restaurants/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 296)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 26.4ms | Allocations: 8431)
+Completed 200 OK in 31ms (Views: 26.9ms | ActiveRecord: 0.3ms | Allocations: 9654)
+
+
+Started GET "/restaurants/5/chef" for ::1 at 2021-11-10 09:51:57 +0100
+Processing by RestaurantsController#chef as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:61:in `set_restaurant'
+  Rendering layout layouts/application.html.erb
+  Rendering restaurants/chef.html.erb within layouts/application
+  Rendered restaurants/chef.html.erb within layouts/application (Duration: 0.5ms | Allocations: 128)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | Allocations: 7361)
+Completed 200 OK in 18ms (Views: 13.7ms | ActiveRecord: 0.4ms | Allocations: 8511)
+
+
+Started GET "/restaurants/5/chef" for ::1 at 2021-11-10 09:52:31 +0100
+Processing by RestaurantsController#chef as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/restaurants_controller.rb:61:in `set_restaurant'
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:61:in `set_restaurant'
+  Rendering layout layouts/application.html.erb
+  Rendering restaurants/chef.html.erb within layouts/application
+  Rendered restaurants/chef.html.erb within layouts/application (Duration: 0.4ms | Allocations: 131)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 7520)
+Completed 200 OK in 25ms (Views: 13.0ms | ActiveRecord: 1.0ms | Allocations: 14194)
+
+
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateReviews (20211110085827)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "reviews" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "restaurant_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_8173017a90"
+FOREIGN KEY ("restaurant_id")
+  REFERENCES "restaurants" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_reviews_on_restaurant_id" ON "reviews" ("restaurant_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20211110085827"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/restaurants" for ::1 at 2021-11-10 10:13:00 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RestaurantsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering restaurants/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurants/index.html.erb:16
+  Rendered restaurants/index.html.erb within layouts/application (Duration: 8.7ms | Allocations: 4651)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.9ms | Allocations: 12044)
+Completed 200 OK in 31ms (Views: 23.1ms | ActiveRecord: 0.2ms | Allocations: 14789)
+
+
+Started GET "/restaurants" for ::1 at 2021-11-10 10:13:00 +0100
+Processing by RestaurantsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering restaurants/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurants/index.html.erb:16
+  Rendered restaurants/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 944)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.9ms | Allocations: 8179)
+Completed 200 OK in 23ms (Views: 21.6ms | ActiveRecord: 0.2ms | Allocations: 8600)
+
+
+Started GET "/restaurants/4" for ::1 at 2021-11-10 10:13:03 +0100
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:61:in `set_restaurant'
+  Rendering layout layouts/application.html.erb
+  Rendering restaurants/show.html.erb within layouts/application
+  Rendered restaurants/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 291)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 37.7ms | Allocations: 8347)
+Completed 200 OK in 44ms (Views: 38.7ms | ActiveRecord: 0.3ms | Allocations: 9574)
+
+
+Started GET "/restaurants/4/reviews/new" for ::1 at 2021-11-10 10:13:13 +0100
+Processing by ReviewsController#new as HTML
+  Parameters: {"restaurant_id"=>"4"}
+  Rendering layout layouts/application.html.erb
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered reviews/new.html.erb within layouts/application (Duration: 12.6ms | Allocations: 3627)
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 3707)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.9ms | Allocations: 8608)
+
+
+  
+ActionView::Template::Error (undefined method `reviews_path' for #<ActionView::Base:0x007fd16a3a5a78>):
+    1: <%= simple_form_for @review do |f| %>
+    2:   <%= f.input :content, label: "write some text" %>
+    3:   <%= f.submit 'create a review' %>
+    4: <% end %>
+  
+app/views/reviews/new.html.erb:1
+Started GET "/restaurants/4/reviews/new" for ::1 at 2021-11-10 10:18:45 +0100
+Processing by ReviewsController#new as HTML
+  Parameters: {"restaurant_id"=>"4"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/reviews_controller.rb:4:in `new'
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:4:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered reviews/new.html.erb within layouts/application (Duration: 10.6ms | Allocations: 3515)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 21.4ms | Allocations: 10948)
+Completed 200 OK in 41ms (Views: 23.1ms | ActiveRecord: 0.5ms | Allocations: 20542)
+
+
+Started POST "/restaurants/4/reviews" for ::1 at 2021-11-10 10:19:58 +0100
+  
+AbstractController::ActionNotFound (The action 'create' could not be found for ReviewsController):
+  
+actionpack (6.1.4.1) lib/abstract_controller/base.rb:160:in `process'
+actionview (6.1.4.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.4.1) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.3) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.1.4.1) lib/rails/engine.rb:539:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/restaurants/4/reviews/new" for ::1 at 2021-11-10 10:26:42 +0100
+Processing by ReviewsController#new as HTML
+  Parameters: {"restaurant_id"=>"4"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/reviews_controller.rb:16:in `set_restaurant'
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:16:in `set_restaurant'
+  Rendering layout layouts/application.html.erb
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered reviews/new.html.erb within layouts/application (Duration: 4.1ms | Allocations: 2564)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 9703)
+Completed 200 OK in 30ms (Views: 13.7ms | ActiveRecord: 0.4ms | Allocations: 18476)
+
+
+Started GET "/restaurants/4/reviews/new" for ::1 at 2021-11-10 10:26:44 +0100
+Processing by ReviewsController#new as HTML
+  Parameters: {"restaurant_id"=>"4"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:16:in `set_restaurant'
+  Rendering layout layouts/application.html.erb
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered reviews/new.html.erb within layouts/application (Duration: 4.6ms | Allocations: 2468)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | Allocations: 9606)
+Completed 200 OK in 18ms (Views: 14.7ms | ActiveRecord: 0.2ms | Allocations: 10600)
+
+
+Started POST "/restaurants/4/reviews" for ::1 at 2021-11-10 10:26:56 +0100
+Processing by ReviewsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "review"=>{"content"=>"coucou c'est super"}, "commit"=>"create a review", "restaurant_id"=>"4"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:16:in `set_restaurant'
+No template found for ReviewsController#create, rendering head :no_content
+Completed 204 No Content in 17ms (ActiveRecord: 0.3ms | Allocations: 4518)
+
+
+Started GET "/restaurants/4/reviews/new" for ::1 at 2021-11-10 10:28:00 +0100
+Processing by ReviewsController#new as HTML
+  Parameters: {"restaurant_id"=>"4"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/reviews_controller.rb:21:in `set_restaurant'
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:21:in `set_restaurant'
+  Rendering layout layouts/application.html.erb
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered reviews/new.html.erb within layouts/application (Duration: 4.9ms | Allocations: 2560)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.4ms | Allocations: 9699)
+Completed 200 OK in 43ms (Views: 15.3ms | ActiveRecord: 2.0ms | Allocations: 19375)
+
+
+Started POST "/restaurants/4/reviews" for ::1 at 2021-11-10 10:28:07 +0100
+Processing by ReviewsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "review"=>{"content"=>"c'était super !"}, "commit"=>"create a review", "restaurant_id"=>"4"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:21:in `set_restaurant'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/reviews_controller.rb:11:in `create'
+  [1m[36mReview Create (1.1ms)[0m  [1m[32mINSERT INTO "reviews" ("content", "restaurant_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "c'était super !"], ["restaurant_id", 4], ["created_at", "2021-11-10 09:28:07.390657"], ["updated_at", "2021-11-10 09:28:07.390657"]]
+  ↳ app/controllers/reviews_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/reviews_controller.rb:11:in `create'
+Redirected to http://localhost:3000/restaurants/4
+Completed 302 Found in 13ms (ActiveRecord: 2.5ms | Allocations: 3532)
+
+
+Started GET "/restaurants/4" for ::1 at 2021-11-10 10:28:07 +0100
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:61:in `set_restaurant'
+  Rendering layout layouts/application.html.erb
+  Rendering restaurants/show.html.erb within layouts/application
+  Rendered restaurants/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 305)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.5ms | Allocations: 7541)
+Completed 200 OK in 16ms (Views: 13.1ms | ActiveRecord: 0.1ms | Allocations: 9099)
+
+
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" ORDER BY "reviews"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/restaurants/4/reviews/new" for ::1 at 2021-11-10 10:29:24 +0100
+Processing by ReviewsController#new as HTML
+  Parameters: {"restaurant_id"=>"4"}
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:21:in `set_restaurant'
+  Rendering layout layouts/application.html.erb
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered reviews/new.html.erb within layouts/application (Duration: 4.8ms | Allocations: 2467)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 25.4ms | Allocations: 9606)
+Completed 200 OK in 29ms (Views: 26.0ms | ActiveRecord: 0.1ms | Allocations: 10601)
+
+
+Started POST "/restaurants/4/reviews" for ::1 at 2021-11-10 10:29:26 +0100
+Processing by ReviewsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "review"=>{"content"=>""}, "commit"=>"create a review", "restaurant_id"=>"4"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:21:in `set_restaurant'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/reviews_controller.rb:11:in `create'
+  [1m[36mReview Create (0.5ms)[0m  [1m[32mINSERT INTO "reviews" ("content", "restaurant_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", ""], ["restaurant_id", 4], ["created_at", "2021-11-10 09:29:26.058089"], ["updated_at", "2021-11-10 09:29:26.058089"]]
+  ↳ app/controllers/reviews_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/reviews_controller.rb:11:in `create'
+Redirected to http://localhost:3000/restaurants/4
+Completed 302 Found in 14ms (ActiveRecord: 3.3ms | Allocations: 2927)
+
+
+Started GET "/restaurants/4" for ::1 at 2021-11-10 10:29:26 +0100
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:61:in `set_restaurant'
+  Rendering layout layouts/application.html.erb
+  Rendering restaurants/show.html.erb within layouts/application
+  Rendered restaurants/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 104)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 7339)
+Completed 200 OK in 15ms (Views: 12.6ms | ActiveRecord: 0.1ms | Allocations: 8320)
+
+
+Started GET "/restaurants/4/reviews/new" for ::1 at 2021-11-10 10:29:30 +0100
+Processing by ReviewsController#new as HTML
+  Parameters: {"restaurant_id"=>"4"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/reviews_controller.rb:21:in `set_restaurant'
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:21:in `set_restaurant'
+  Rendering layout layouts/application.html.erb
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered reviews/new.html.erb within layouts/application (Duration: 7.7ms | Allocations: 2564)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20.1ms | Allocations: 12274)
+Completed 200 OK in 41ms (Views: 21.1ms | ActiveRecord: 1.8ms | Allocations: 21930)
+
+
+Started GET "/restaurants/4/reviews/new" for ::1 at 2021-11-10 10:29:44 +0100
+Processing by ReviewsController#new as HTML
+  Parameters: {"restaurant_id"=>"4"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/reviews_controller.rb:21:in `set_restaurant'
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:21:in `set_restaurant'
+  Rendering layout layouts/application.html.erb
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered reviews/new.html.erb within layouts/application (Duration: 4.8ms | Allocations: 2652)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.0ms | Allocations: 9791)
+Completed 200 OK in 50ms (Views: 19.8ms | ActiveRecord: 1.6ms | Allocations: 19503)
+
+
+Started POST "/restaurants/4/reviews" for ::1 at 2021-11-10 10:29:47 +0100
+Processing by ReviewsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "review"=>{"content"=>""}, "commit"=>"create a review", "restaurant_id"=>"4"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:21:in `set_restaurant'
+  Rendering layout layouts/application.html.erb
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered reviews/new.html.erb within layouts/application (Duration: 6.6ms | Allocations: 3813)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.1ms | Allocations: 10936)
+Completed 200 OK in 24ms (Views: 18.8ms | ActiveRecord: 0.2ms | Allocations: 12899)
+
+
+Started POST "/restaurants/4/reviews" for ::1 at 2021-11-10 10:30:33 +0100
+Processing by ReviewsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "review"=>{"content"=>"dadada"}, "commit"=>"create a review", "restaurant_id"=>"4"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:21:in `set_restaurant'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/reviews_controller.rb:11:in `create'
+  [1m[36mReview Create (0.6ms)[0m  [1m[32mINSERT INTO "reviews" ("content", "restaurant_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "dadada"], ["restaurant_id", 4], ["created_at", "2021-11-10 09:30:33.533965"], ["updated_at", "2021-11-10 09:30:33.533965"]]
+  ↳ app/controllers/reviews_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/reviews_controller.rb:11:in `create'
+Redirected to http://localhost:3000/restaurants/4
+Completed 302 Found in 13ms (ActiveRecord: 2.5ms | Allocations: 2971)
+
+
+Started GET "/restaurants/4" for ::1 at 2021-11-10 10:30:33 +0100
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:61:in `set_restaurant'
+  Rendering layout layouts/application.html.erb
+  Rendering restaurants/show.html.erb within layouts/application
+  Rendered restaurants/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 115)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20.7ms | Allocations: 7315)
+Completed 200 OK in 24ms (Views: 21.6ms | ActiveRecord: 0.2ms | Allocations: 8492)
+
+
+Started GET "/restaurants/4" for ::1 at 2021-11-10 10:31:41 +0100
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:61:in `set_restaurant'
+  Rendering layout layouts/application.html.erb
+  Rendering restaurants/show.html.erb within layouts/application
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = ?[0m  [["restaurant_id", 4]]
+  ↳ app/views/restaurants/show.html.erb:18
+  Rendered restaurants/show.html.erb within layouts/application (Duration: 29.8ms | Allocations: 6979)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 41.1ms | Allocations: 14296)
+Completed 200 OK in 46ms (Views: 43.0ms | ActiveRecord: 0.3ms | Allocations: 16011)
+
+
+Started GET "/restaurants/4/edit" for ::1 at 2021-11-10 10:32:13 +0100
+Processing by RestaurantsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:61:in `set_restaurant'
+  Rendering layout layouts/application.html.erb
+  Rendering restaurants/edit.html.erb within layouts/application
+  Rendered restaurants/_form.html.erb (Duration: 25.0ms | Allocations: 6398)
+  Rendered restaurants/edit.html.erb within layouts/application (Duration: 27.1ms | Allocations: 6806)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 49.9ms | Allocations: 14858)
+Completed 200 OK in 55ms (Views: 50.7ms | ActiveRecord: 0.2ms | Allocations: 15972)
+
+
+Started GET "/restaurants" for ::1 at 2021-11-10 10:32:16 +0100
+Processing by RestaurantsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering restaurants/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurants/index.html.erb:16
+  Rendered restaurants/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1224)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 30.6ms | Allocations: 9369)
+Completed 200 OK in 32ms (Views: 30.9ms | ActiveRecord: 0.2ms | Allocations: 9923)
+
+
+Started GET "/restaurants" for ::1 at 2021-11-10 10:38:14 +0100
+Processing by RestaurantsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering restaurants/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/restaurants/index.html.erb:16
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurants/index.html.erb:16
+  Rendered restaurants/index.html.erb within layouts/application (Duration: 10.3ms | Allocations: 5353)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 37.3ms | Allocations: 12745)
+Completed 200 OK in 43ms (Views: 39.0ms | ActiveRecord: 0.4ms | Allocations: 14815)
+
+
+Started GET "/restaurants/5" for ::1 at 2021-11-10 10:38:16 +0100
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:61:in `set_restaurant'
+  Rendering layout layouts/application.html.erb
+  Rendering restaurants/show.html.erb within layouts/application
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = ?[0m  [["restaurant_id", 5]]
+  ↳ app/views/restaurants/show.html.erb:18
+  Rendered restaurants/show.html.erb within layouts/application (Duration: 10.1ms | Allocations: 2451)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 47.4ms | Allocations: 10531)
+Completed 200 OK in 54ms (Views: 49.2ms | ActiveRecord: 0.6ms | Allocations: 11755)
+
+
+Started GET "/restaurants/4/reviews/new" for ::1 at 2021-11-10 10:38:19 +0100
+Processing by ReviewsController#new as HTML
+  Parameters: {"restaurant_id"=>"4"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:28:in `set_restaurant'
+  Rendering layout layouts/application.html.erb
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered reviews/new.html.erb within layouts/application (Duration: 5.8ms | Allocations: 2697)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.2ms | Allocations: 9833)
+Completed 200 OK in 27ms (Views: 17.8ms | ActiveRecord: 0.2ms | Allocations: 13553)
+
+
+Started POST "/restaurants/4/reviews" for ::1 at 2021-11-10 10:38:27 +0100
+Processing by ReviewsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "review"=>{"content"=>"trop bon"}, "commit"=>"create a review", "restaurant_id"=>"4"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:28:in `set_restaurant'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/reviews_controller.rb:11:in `create'
+  [1m[36mReview Create (0.5ms)[0m  [1m[32mINSERT INTO "reviews" ("content", "restaurant_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "trop bon"], ["restaurant_id", 4], ["created_at", "2021-11-10 09:38:27.325975"], ["updated_at", "2021-11-10 09:38:27.325975"]]
+  ↳ app/controllers/reviews_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/reviews_controller.rb:11:in `create'
+Redirected to http://localhost:3000/restaurants/4
+Completed 302 Found in 14ms (ActiveRecord: 3.5ms | Allocations: 3420)
+
+
+Started GET "/restaurants/4" for ::1 at 2021-11-10 10:38:27 +0100
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:61:in `set_restaurant'
+  Rendering layout layouts/application.html.erb
+  Rendering restaurants/show.html.erb within layouts/application
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = ?[0m  [["restaurant_id", 4]]
+  ↳ app/views/restaurants/show.html.erb:18
+  Rendered restaurants/show.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1056)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 8294)
+Completed 200 OK in 15ms (Views: 12.6ms | ActiveRecord: 0.2ms | Allocations: 9275)
+
+
+Started DELETE "/reviews/4" for ::1 at 2021-11-10 10:38:32 +0100
+Processing by ReviewsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"4"}
+Completed 404 Not Found in 1ms (ActiveRecord: 0.0ms | Allocations: 676)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Restaurant without an ID):
+  
+app/controllers/reviews_controller.rb:28:in `set_restaurant'
+Started GET "/restaurants/3/reviews/new" for ::1 at 2021-11-10 10:40:14 +0100
+Processing by ReviewsController#new as HTML
+  Parameters: {"restaurant_id"=>"3"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/reviews_controller.rb:28:in `set_restaurant'
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:28:in `set_restaurant'
+Completed 404 Not Found in 14ms (ActiveRecord: 2.3ms | Allocations: 4659)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Restaurant with 'id'=3):
+  
+app/controllers/reviews_controller.rb:28:in `set_restaurant'
+Started GET "/restaurants/" for ::1 at 2021-11-10 10:40:16 +0100
+Processing by RestaurantsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering restaurants/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurants/index.html.erb:16
+  Rendered restaurants/index.html.erb within layouts/application (Duration: 7.9ms | Allocations: 4056)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.8ms | Allocations: 11295)
+Completed 200 OK in 21ms (Views: 19.6ms | ActiveRecord: 0.3ms | Allocations: 11911)
+
+
+Started GET "/restaurants/5" for ::1 at 2021-11-10 10:40:18 +0100
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:61:in `set_restaurant'
+  Rendering layout layouts/application.html.erb
+  Rendering restaurants/show.html.erb within layouts/application
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = ?[0m  [["restaurant_id", 5]]
+  ↳ app/views/restaurants/show.html.erb:18
+  Rendered restaurants/show.html.erb within layouts/application (Duration: 6.4ms | Allocations: 2438)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 26.3ms | Allocations: 10490)
+Completed 200 OK in 33ms (Views: 27.7ms | ActiveRecord: 0.8ms | Allocations: 11476)
+
+
+Started GET "/restaurants/5/reviews/new" for ::1 at 2021-11-10 10:40:22 +0100
+Processing by ReviewsController#new as HTML
+  Parameters: {"restaurant_id"=>"5"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:28:in `set_restaurant'
+  Rendering layout layouts/application.html.erb
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered reviews/new.html.erb within layouts/application (Duration: 6.9ms | Allocations: 2564)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 22.3ms | Allocations: 9702)
+Completed 200 OK in 32ms (Views: 23.6ms | ActiveRecord: 0.7ms | Allocations: 13081)
+
+
+Started POST "/restaurants/5/reviews" for ::1 at 2021-11-10 10:40:25 +0100
+Processing by ReviewsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "review"=>{"content"=>"coucuoc"}, "commit"=>"create a review", "restaurant_id"=>"5"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:28:in `set_restaurant'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/reviews_controller.rb:11:in `create'
+  [1m[36mReview Create (0.5ms)[0m  [1m[32mINSERT INTO "reviews" ("content", "restaurant_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "coucuoc"], ["restaurant_id", 5], ["created_at", "2021-11-10 09:40:25.717451"], ["updated_at", "2021-11-10 09:40:25.717451"]]
+  ↳ app/controllers/reviews_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/reviews_controller.rb:11:in `create'
+Redirected to http://localhost:3000/restaurants/5
+Completed 302 Found in 13ms (ActiveRecord: 3.3ms | Allocations: 3424)
+
+
+Started GET "/restaurants/5" for ::1 at 2021-11-10 10:40:25 +0100
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:61:in `set_restaurant'
+  Rendering layout layouts/application.html.erb
+  Rendering restaurants/show.html.erb within layouts/application
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = ?[0m  [["restaurant_id", 5]]
+  ↳ app/views/restaurants/show.html.erb:18
+  Rendered restaurants/show.html.erb within layouts/application (Duration: 4.1ms | Allocations: 916)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 8151)
+Completed 200 OK in 15ms (Views: 13.0ms | ActiveRecord: 0.3ms | Allocations: 9131)
+
+
+Started DELETE "/reviews/5" for ::1 at 2021-11-10 10:40:27 +0100
+Processing by ReviewsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"5"}
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:19:in `destroy'
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:20:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/reviews_controller.rb:21:in `destroy'
+  [1m[36mReview Destroy (0.4ms)[0m  [1m[31mDELETE FROM "reviews" WHERE "reviews"."id" = ?[0m  [["id", 5]]
+  ↳ app/controllers/reviews_controller.rb:21:in `destroy'
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/reviews_controller.rb:21:in `destroy'
+Redirected to http://localhost:3000/restaurants/5
+Completed 302 Found in 15ms (ActiveRecord: 4.0ms | Allocations: 3578)
+
+
+Started GET "/restaurants/5" for ::1 at 2021-11-10 10:40:27 +0100
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:61:in `set_restaurant'
+  Rendering layout layouts/application.html.erb
+  Rendering restaurants/show.html.erb within layouts/application
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = ?[0m  [["restaurant_id", 5]]
+  ↳ app/views/restaurants/show.html.erb:18
+  Rendered restaurants/show.html.erb within layouts/application (Duration: 2.1ms | Allocations: 862)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 8098)
+Completed 200 OK in 15ms (Views: 12.6ms | ActiveRecord: 0.2ms | Allocations: 9078)
+
+
