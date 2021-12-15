@@ -1,0 +1,21 @@
+<h1>List#index</h1>
+
+<%= link_to "New Playlist", new_list_path, class:"btn btn-success" %>
+<%= link_to "New Music", new_music_path, class:"btn btn-info" %>
+
+<div class="row d-flex justify-content-around">
+  <% @lists.reverse.each do |list| %>
+    <div class="card mx-2 my-2" style="width: 18rem;">
+      <div class="card-body">
+        <% if list.photo.attached? %>
+          <%= cl_image_tag list.photo.key, height: 200, width: 250, crop: :fill %>
+          <% else %>
+          <%= image_tag('https://res.cloudinary.com/drndiy1wn/image/upload/v1639402451/paknbpy0fnfdvoizh4q2.jpg', height: 200, width: 250, crop: :fill) %>
+        <% end %>
+        <h5 class="card-title"><%= link_to list.name, list_path(list.id) %></h5>
+        <p class="card-text"><%= list.style %></p>
+        <p class="card-text"><%= list.user.username %></p>
+      </div>
+    </div>
+  <% end %>
+</div>

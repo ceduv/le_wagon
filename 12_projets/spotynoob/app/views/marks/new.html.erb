@@ -1,0 +1,8 @@
+<h1>new#mark</h1>
+
+<%= simple_form_for [@list, @mark] do |f| %>
+  <div class="form">
+    <%= f.input :music_id, collection: @musics %>
+    <%= f.submit %>
+  </div>
+<% end %>

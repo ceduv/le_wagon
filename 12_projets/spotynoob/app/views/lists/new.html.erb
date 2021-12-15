@@ -1,0 +1,13 @@
+<h1>new#list</h1>
+
+<%= simple_form_for @list do |f| %>
+  <div class="form">
+    <%= f.input :name, placeholder: 'Playlist name' %>
+    <%= f.input :style, collection: List::STYLE %>
+    <%= f.input :photo, as: :file %>
+    <div class="submit">
+      <%= f.submit class: 'btn btn-primary' %>
+      <%= link_to "Back to index", lists_path, class:"btn btn-info" %>
+    </div>
+  </div>
+<% end %>

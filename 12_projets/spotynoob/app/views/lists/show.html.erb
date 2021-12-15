@@ -1,0 +1,16 @@
+<h1>list#show</h1>
+<h2><%= @list.name %></h2>
+<% if @list.photo.attached? %>
+  <%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill %>
+<% end %>
+<h2><%= @list.user.username %></h2>
+
+<ul>
+  <% @musics.reverse.each do |mark| %>
+    <li><%= mark.music.title %></li>
+  <% end %>
+</ul>
+
+
+<%= link_to "Delete", list_path(@list), method: :delete, class: "btn btn-danger" %>
+<%= link_to "Add Music", new_list_mark_path(@list), class: "btn btn-success" %>
